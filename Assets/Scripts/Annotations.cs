@@ -5,7 +5,7 @@ using UnityEngine;
 public class Annotations : MonoBehaviour
 {
 
-    Tileset: https://finalbossblues.itch.io/tf-jungle-tileset
+    //Tileset: https://finalbossblues.itch.io/tf-jungle-tileset
 
     // Start is called before the first frame update
     void Start()
