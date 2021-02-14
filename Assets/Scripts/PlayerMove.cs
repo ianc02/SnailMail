@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
     private float horizontal;
     private float vertical;
 
-    public float runSpeed = 5f;
+    public float runSpeed = 10f;
     private float moveLimiter = 0.7f;
 
     // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class PlayerMove : MonoBehaviour
         if (horizontal != 0 && vertical != 0)
         {
             horizontal *= moveLimiter;
-            vertical += moveLimiter;
+            vertical *= moveLimiter;
         }
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
