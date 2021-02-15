@@ -6,12 +6,16 @@ public class OnCollision : MonoBehaviour
 {
 
     Rigidbody2D body;
+    private bool key;
+    private bool mail;
 
 
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        key = false;
+        mail = false;
     }
 
     // Update is called once per frame
@@ -25,7 +29,7 @@ public class OnCollision : MonoBehaviour
         if (collision.gameObject.tag == "Letter")
         {
             Destroy(collision.gameObject);
-            // Do stuff here
+            mail = true;
         }
         if (collision.gameObject.tag == "Cave")
         {
@@ -37,6 +41,19 @@ public class OnCollision : MonoBehaviour
         {
             Destroy(collision.gameObject);
             body.transform.position = new Vector2(-1, 0);
+            key = true;
+        }
+
+        if (collision.gameObject.tag == "Lock" && key)
+        {
+            Destroy(collision.gameObject);
+            // Do stuff here
+        }
+
+        if (collision.gameObject.tag == "Mailbox" && mail)
+        {
+            Destroy(collision.gameObject);
+            // Win
         }
     }
 }
