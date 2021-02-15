@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Snail
+  - Beetle
+  - Letter
+  - Lock
+  - Mailbox
+  - Key
   layers:
   - Default
   - TransparentFX

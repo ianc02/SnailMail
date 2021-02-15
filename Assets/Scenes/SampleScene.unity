@@ -205,9 +205,10 @@ GameObject:
   - component: {fileID: 145868918}
   - component: {fileID: 145868917}
   - component: {fileID: 145868921}
+  - component: {fileID: 145868922}
   m_Layer: 0
   m_Name: Snail
-  m_TagString: Untagged
+  m_TagString: Snail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337,6 +338,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 5
+--- !u!114 &145868922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145868916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5caeafad94af54c8c4ae9ee8f97c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &145960263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,26 +1831,6 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 0, y: 16, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 25
-      m_TileSpriteIndex: 25
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 1, y: 16, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 25
-      m_TileSpriteIndex: 25
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 2, y: 16, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 25
@@ -5029,7 +5022,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 176
+  - m_RefCount: 174
     m_Data: {fileID: 11400000, guid: 3fd78350a25a11145ac51e30a15dafc7, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -5094,7 +5087,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 176
+  - m_RefCount: 174
     m_Data: {fileID: 5731905381763297604, guid: b3818efa2d5254093ae4ccf4c3800347,
       type: 3}
   - m_RefCount: 0
@@ -5111,7 +5104,7 @@ Tilemap:
     m_Data: {fileID: -7754538097837286381, guid: b3818efa2d5254093ae4ccf4c3800347,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 455
+  - m_RefCount: 453
     m_Data:
       e00: 1
       e01: 0
@@ -5130,7 +5123,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 455
+  - m_RefCount: 453
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -5314,7 +5307,7 @@ GameObject:
   - component: {fileID: 397909214}
   m_Layer: 0
   m_Name: Mailbox
-  m_TagString: Untagged
+  m_TagString: Mailbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40063,7 +40056,7 @@ GameObject:
   - component: {fileID: 816392406}
   m_Layer: 0
   m_Name: lock
-  m_TagString: Untagged
+  m_TagString: Lock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42114,7 +42107,7 @@ GameObject:
   - component: {fileID: 1873421497}
   m_Layer: 0
   m_Name: Key
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42194,9 +42187,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1891563400}
   - component: {fileID: 1891563399}
+  - component: {fileID: 1891563401}
   m_Layer: 0
   m_Name: Letter
-  m_TagString: Untagged
+  m_TagString: Letter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42266,3 +42260,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1891563401
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891563398}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.2}
+  m_EdgeRadius: 0
