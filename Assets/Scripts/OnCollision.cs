@@ -23,5 +23,16 @@ public class OnCollision : MonoBehaviour
             Destroy(collision.gameObject);
             // Do stuff here
         }
+        if (collision.gameObject.tag == "Cave")
+        {
+            Destroy(collision.gameObject);
+            // Do stuff here
+        }
+
+        if (collision.gameObject.tag == "Key")
+        {
+            Destroy(collision.gameObject);
+            // Do stuff here
+        }
     }
 }

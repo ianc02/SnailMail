@@ -10,6 +10,7 @@ TagManager:
   - Lock
   - Mailbox
   - Key
+  - Cave
   layers:
   - Default
   - TransparentFX
