@@ -53,7 +53,8 @@ public class OnCollision : MonoBehaviour
         if (collision.gameObject.tag == "Mailbox" && mail)
         {
             Destroy(collision.gameObject);
-            // Win
+            GameManager.Instance.GameOver();
+            
         }
     }
 }
