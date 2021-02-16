@@ -9,6 +9,13 @@ public class OnCollision : MonoBehaviour
     private bool key;
     private bool mail;
 
+    public AudioSource crunch;
+    public AudioSource success;
+    public AudioSource climb;
+    public AudioSource completion;
+    public AudioSource victory;
+    public AudioSource music;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,38 +35,50 @@ public class OnCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Letter")
         {
+            completion.Play();
             Destroy(collision.gameObject);
             mail = true;
         }
+
         if (collision.gameObject.tag == "Cave")
         {
-            Destroy(collision.gameObject);
+            climb.Play();
             body.transform.position = new Vector2(2, 18);
+            Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "Key")
         {
-            Destroy(collision.gameObject);
-            body.transform.position = new Vector2(-1, 0);
+            climb.Play();
+            completion.Play();
+            body.transform.position = new Vector2(11, 9);
             key = true;
+            Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "Lock" && key)
         {
+            success.Play();
             Destroy(collision.gameObject);
             // Do stuff here
         }
 
         if (collision.gameObject.tag == "Mailbox" && mail)
         {
+            victory.Play();
             GameManager.Instance.GameOver();
-            
         }
+
         if (collision.gameObject.tag == "Beetle")
         {
-            
+            crunch.Play();
             GameManager.Instance.GameOver();
-
+            Destroy(collision.gameObject);
         }
+    }
+
+    IEnumerator wait(float sec)
+    {
+        yield return new WaitForSeconds(sec);
     }
 }

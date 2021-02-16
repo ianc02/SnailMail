@@ -10,11 +10,14 @@ public class BeetleMove : MonoBehaviour
 
     public float duration = 5f;
 
+    private AudioSource audioSource;
+
     Rigidbody2D body;
     public float speed = 10f;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         body = GetComponent<Rigidbody2D>();
         qlocs = new Queue<GameObject>();
         foreach (GameObject go in locs)
@@ -59,13 +62,13 @@ public class BeetleMove : MonoBehaviour
     }
 
 
-//    private void OnTriggerEnter2D(Collider2D collision)
-//    {
-//        if (collision.gameObject.CompareTag("Player"))
-//        {
-//            GameManager.Instance.GameOver();
-//        }
-//   }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            audioSource.Play();
+        }
+   }
 
 
 }
