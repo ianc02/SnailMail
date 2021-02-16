@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -11,8 +12,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject backgroundImage;
     public GameObject startbutton;
+
+    public GameObject canvas;
+    public GameObject events;
     // Start is called before the first frame update
-    void Start()
+    void Start() 
     {
         
     }
@@ -29,6 +33,8 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(canvas);
+            DontDestroyOnLoad(events);
 
         }
         else
@@ -42,8 +48,7 @@ public class GameManager : MonoBehaviour
     public void startButton()
     {
         startbutton.SetActive(false);
-        StartCoroutine(ColorLerp(new Color(1, 1, 1, 0), 3));
-
+        StartCoroutine(LoadYourAsyncScene("JungleScene"));
     }
 
     public void GameOver()
@@ -66,5 +71,16 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         sprite.color = endValue;
+    }
+
+    IEnumerator LoadYourAsyncScene(string scene)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        StartCoroutine(ColorLerp(new Color(1, 1, 1, 0), 3));
+
     }
 }
