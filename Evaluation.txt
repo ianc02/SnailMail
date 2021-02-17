@@ -1,0 +1,38 @@
+	Our game follows the unnamed protagonist, the snail, and his glorious quest to deliver his mail.
+His snail mail to be precise. The player is prompted by a pop-up dialogue box to find and deliver the mail which
+gives narrative. The player, while exploring, may find themselves unable to cross the bridge which requires a 
+key found in another part of the world in a cave maze. This simple task of delivering mail is quickly turned more difficult 
+in the presence of enemy beetles, exploring the world for answers, and solving the maze. Many of our aesthetics came from 
+the opengameart website which we tried our best to fit into the somewhat pixelated visuals of our game. We used vibrant
+colors and relaxing music, which is nice for the player but is also somewhat misleading since, although the game is
+simple, even after plenty of practice dodging some of those beetles can be hard. We used colliders and triggers to keep the
+player contained and the actions between enemies and quest items between the player possible. The enemies move around
+using the ping pong system and the player has basic keyboard input for movement. The game has booleans for
+when the player picks up the key or mail, which will allow them to certain areas or to beat the game. 
+	Working with tilemaps was difficult at first, as I would often make one go over the other, then vice versa which
+made flavor difficult until I finished the video and realized the z positions mattered for that respect. Getting the player
+to move was fun and watching the world come together overtime was very enjoyable as it got more immersive and aesthetically
+pleasing. 
+
+**Josh Joys and Struggles**
+
+Annotations:
+    Tileset: https://finalbossblues.itch.io/tf-jungle-tileset
+    Beetle: Josh Thomeczek
+    Snail: Ian Campbell
+    Envelope: https://opengameart.org/node/108674
+    Mailbox: https://opengameart.org/content/maibox-sprite-pack
+    Key: https://opengameart.org/content/key-icons
+    Lock: https://www.flaticon.com/free-icon/lock_891399
+    Climb Sound: https://opengameart.org/content/bone-fall-ledge-climbing-impact-yo-frankie
+    Completion Sound & Success Sound: https://opengameart.org/content/completion-sound
+    Crunch Sound: https://opengameart.org/content/5-break-crunch-impacts
+    Victory Sound: https://opengameart.org/content/victory-2
+    Music: https://opengameart.org/content/8-bit-lofi-ice-cave
+    Font:https://www.dafont.com/momsdiner.font
+
+Ian Contributions - Creation of basic world in Unity, tilemap setup, scripts for collision detection and scenes, 
+Gamemanager, sprites in world, particles, some dialogue.
+
+Josh Contributions - Designed and decorated world and created game narrative. Beetle movement and collison, sound 
+and dialogue,  movement and camera following, found sprites and sounds. 
