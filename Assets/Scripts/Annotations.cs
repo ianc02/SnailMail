@@ -7,6 +7,7 @@ public class Annotations : MonoBehaviour
 
     //Tileset: https://finalbossblues.itch.io/tf-jungle-tileset
     //Beetle: Josh Thomeczek
+    //Snail: Ian Campbell
     //Envelope: https://opengameart.org/node/108674
     //Mailbox: https://opengameart.org/content/maibox-sprite-pack
     //Key: https://opengameart.org/content/key-icons
