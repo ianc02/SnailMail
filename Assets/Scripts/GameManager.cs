@@ -8,13 +8,17 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
 
-    
-
     public GameObject backgroundImage;
     public GameObject startbutton;
+    public GameObject title;
+    public GameObject image;
 
     public GameObject canvas;
     public GameObject events;
+
+    public GameObject dialogueBox;
+    public GameObject dialogueText;
+
     // Start is called before the first frame update
     void Start() 
     {
@@ -83,4 +87,19 @@ public class GameManager : MonoBehaviour
         StartCoroutine(ColorLerp(new Color(1, 1, 1, 0), 3));
 
     }
+
+
+    public void StartDialogue(string text)
+    {
+        dialogueBox.SetActive(true);
+        dialogueText.GetComponent<TextMeshProUGUI>().text = text;
+    }
+
+    public void HideDialogue()
+    {
+        dialogueBox.SetActive(false);
+    }
+
+
+
 }
