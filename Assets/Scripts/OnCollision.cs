@@ -15,12 +15,14 @@ public class OnCollision : MonoBehaviour
     public AudioSource completion;
     public AudioSource victory;
     public AudioSource music;
+    ParticleSystem particles;
 
 
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        particles = gameObject.GetComponentsInChildren<ParticleSystem>()[0];
         key = false;
         mail = false;
     }
@@ -72,6 +74,8 @@ public class OnCollision : MonoBehaviour
         if (collision.gameObject.tag == "Beetle")
         {
             crunch.Play();
+            particles.Play();
+            wait(5);
             GameManager.Instance.GameOver();
             Destroy(collision.gameObject);
         }
