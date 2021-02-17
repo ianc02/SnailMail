@@ -52,12 +52,14 @@ public class GameManager : MonoBehaviour
     public void startButton()
     {
         startbutton.SetActive(false);
+        title.SetActive(false);
         StartCoroutine(LoadYourAsyncScene("JungleScene"));
     }
 
     public void GameOver()
     {
         startbutton.SetActive(true);
+        title.SetActive(true);
         StopAllCoroutines();
         StartCoroutine(ColorLerp(new Color(1, 1, 1, 1), 1));
     }
@@ -66,11 +68,13 @@ public class GameManager : MonoBehaviour
     {
         float time = 0;
         Image sprite = backgroundImage.GetComponent<Image>();
+        Image snailImage = image.GetComponent<Image>();
         Color startValue = sprite.color;
 
         while (time < duration)
         {
             sprite.color = Color.Lerp(startValue, endValue, time / duration);
+            snailImage.color = Color.Lerp(startValue, endValue, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
