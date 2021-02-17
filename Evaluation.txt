@@ -13,8 +13,7 @@ when the player picks up the key or mail, which will allow them to certain areas
 made flavor difficult until I finished the video and realized the z positions mattered for that respect. Getting the player
 to move was fun and watching the world come together overtime was very enjoyable as it got more immersive and aesthetically
 pleasing. 
-
-**Josh Joys and Struggles**
+	I learned just how different the roles of game designer and game programmer are while working on this project. As the game grew in complexity, I realized that the core mechanics were all in place, and I could make simple changes to design the game outside of code. This was particularly helpful when I could just copy and paste the creepy crawly beetles and change their paths very easily using a list of locations. The tileset was also a joy to play with and make a world inhabited by the beetles and snail. Managing the two scenes was the biggest headache in this project, and I think I will need to work on it more in future projects. 
 
 Annotations:
     Tileset: https://finalbossblues.itch.io/tf-jungle-tileset
@@ -34,5 +33,5 @@ Annotations:
 Ian Contributions - Creation of basic world in Unity, tilemap setup, scripts for collision detection and scenes, 
 Gamemanager, sprites in world, particles, some dialogue.
 
-Josh Contributions - Designed and decorated world and created game narrative. Beetle movement and collison, sound 
+Josh Contributions - Designed and decorated world and created game narrative. Beetle movement and collision, sound, music, 
 and dialogue,  movement and camera following, found sprites and sounds. 
