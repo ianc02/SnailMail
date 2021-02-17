@@ -15,14 +15,16 @@ public class OnCollision : MonoBehaviour
     public AudioSource completion;
     public AudioSource victory;
     public AudioSource music;
-    ParticleSystem particles;
+    ParticleSystem hitparticles;
+    ParticleSystem getparticles;
 
 
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        particles = gameObject.GetComponentsInChildren<ParticleSystem>()[0];
+        hitparticles = gameObject.GetComponentsInChildren<ParticleSystem>()[0];
+        getparticles = gameObject.GetComponentsInChildren<ParticleSystem>()[1];
         key = false;
         mail = false;
     }
@@ -38,6 +40,7 @@ public class OnCollision : MonoBehaviour
         if (collision.gameObject.tag == "Letter")
         {
             completion.Play();
+            getparticles.Play();
             Destroy(collision.gameObject);
             mail = true;
         }
@@ -54,6 +57,7 @@ public class OnCollision : MonoBehaviour
             climb.Play();
             completion.Play();
             body.transform.position = new Vector2(11, 9);
+            getparticles.Play();
             key = true;
             Destroy(collision.gameObject);
         }
@@ -68,14 +72,14 @@ public class OnCollision : MonoBehaviour
         if (collision.gameObject.tag == "Mailbox" && mail)
         {
             victory.Play();
+            getparticles.Play();
             GameManager.Instance.GameOver();
         }
 
         if (collision.gameObject.tag == "Beetle")
         {
             crunch.Play();
-            particles.Play();
-            wait(5);
+            hitparticles.Play();
             GameManager.Instance.GameOver();
             Destroy(collision.gameObject);
         }
