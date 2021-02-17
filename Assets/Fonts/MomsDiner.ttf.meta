@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b9f48acdd60d14e86b601eaf6d7564f8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - MomsDiner
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d15524408763b4351adfaf5282bb4df4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
